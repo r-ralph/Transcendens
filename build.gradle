@@ -19,6 +19,15 @@ repositories {
     mavenCentral()
 }
 
+//noinspection GroovyAssignabilityCheck
+sourceSets {
+    main {
+        java { srcDir 'libs_module/j2blocks/src/main/java' }
+    }
+}
+
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$KOTLIN_VERSION"
+    //compile files('libs/nbt-1.0.2.jar')
+    compile files('libs/leveldb.jar')
 }
